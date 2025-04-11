@@ -90,7 +90,7 @@ public class LoginServer extends Thread {
 
             while (listening) {
                 Socket socket = this.socketServer.accept();
-                if(!Main.getip(socket).equals("5.73.69.243")){
+                if(!Main.getip(socket).equals("0.0.0.0")){
                 debug("Client connection from " + Main.getip(socket));
                 LoginServerConnection socketConnection = new LoginServerConnection(socket, this);
                 socketConnection.start();
